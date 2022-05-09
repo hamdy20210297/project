@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+
+/* Navbar styling */
+nav{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1366px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+  font-size: 16px;
+}
+
+nav .logo{
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+  flex: 1.5;
+  text-decoration: none;
+  font-size: 2.4rem;
+  margin-bottom: 0;
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  flex: 2.5;
+}
+
+nav ul li a{
+  display: block;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+nav ul li a:hover{
+  color: rgb(16, 165, 165);
+}
+
+/*  accessories section */
+.newest-accessories {
+  padding-top: 5rem;
+  align-items: center;
+}
+
+.newest-accessories .accessories-section {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.accessories-section h4 {
+  color: #6e0aef;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.accessories-section .accessories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: flex-start;
+}
+
+.accessories .accessories {
+  margin: 2rem 0;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accessories img {
+  margin-bottom: 1rem;
+}
+
+.accessories img:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+.accessories h3 {
+  font-size: 1.6rem;
+}
+.accessories p {
+  font-size: 1.2rem;
+}
+
+.accessories-section button {
+  width: 15rem;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f7fc;
+  height: 15vh;
+  margin-top: 5rem;
+  padding: 2rem 0;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+.footer-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section .socials {
+  margin-bottom: 1rem;
+}
+.footer-section .socials i {
+  padding: 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+.footer-section .socials i:hover {
+  color: #6e0aef;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1300px) {
+  * {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 1175px) {
+  * {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  * {
+    text-align: center;
+  }
+  .hero img {
+    display: none;
+  }
+  .hero-section {
+    align-items: center;
+    padding: 2rem 0rem;
+    width: 50%;
+  }
+  .hero .btn {
+    align-self: center;
+  }
+  .hero .content {
+    margin-top: 2rem;
+  }
+  .features-section .qualities {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section.features .features-section {
+    align-items: center;
+  }
+  .accessories-section h4 {
+    align-self: center;
+  }
+}
+
+@media (max-width: 660px) {
+  .hero-section .content h1 {
+    font-size: 2rem;
+  }
+  .accessories-section {
+    align-items: center;
+  }
+  .accessories-section .accessories {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 504px) {
+  .accessories-section .accessories {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  nav .bars-menu {
+    display: block;
+    font-size: 3rem;
+  }
+  nav .nav-items {
+    position: absolute;
+    left: 0;
+    top: 10vh;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #2fb1d1;
+    padding: 2rem 0;
+  }
+  nav .nav-items .nav-item {
+    margin: 1rem 0;
+  }
+  nav .nav-items .nav-item a {
+    color: white;
+  }
+  nav .nav-items.active {
+    display: flex;
+  }
+}
